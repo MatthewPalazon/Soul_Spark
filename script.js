@@ -44,3 +44,6 @@ let symbol = [
   ];
 
   
+  let myMindfullnessMessage = []
+
+ 
