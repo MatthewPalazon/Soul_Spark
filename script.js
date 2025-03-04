@@ -46,4 +46,11 @@ let symbol = [
   
   let myMindfullnessMessage = []
 
+  myMindfullnessMessage.push(symbol[generateRandomNumber(symbol.length)]);
+  
+  myMindfullnessMessage.push(quotes[generateRandomNumber(quotes.length)]);
+ 
+  myMindfullnessMessage.push(tasks[generateRandomNumber(tasks.length)]);
+  console.log(myMindfullnessMessage);
+ 
  
