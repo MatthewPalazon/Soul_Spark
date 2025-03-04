@@ -44,13 +44,19 @@ let symbol = [
   ];
 
   
-  let myMindfullnessMessage = []
+  function generateMindfulnessMessage() {
+    let myMindfulnessMessage = [
+        symbol[generateRandomNumber(symbol.length)],
+        quotes[generateRandomNumber(quotes.length)],
+        tasks[generateRandomNumber(tasks.length)]
+    ];
 
-  myMindfullnessMessage.push(symbol[generateRandomNumber(symbol.length)]);
-  
-  myMindfullnessMessage.push(quotes[generateRandomNumber(quotes.length)]);
+    return myMindfulnessMessage;
+}
  
-  myMindfullnessMessage.push(tasks[generateRandomNumber(tasks.length)]);
-  console.log(myMindfullnessMessage);
- 
- 
+ function formatMindfullness(){
+    const formatted = myMindfullnessMessage.join('\n')
+    console.log(formatted)
+ }
+
+ formatMindfullness(myMindfullnessMessage);
