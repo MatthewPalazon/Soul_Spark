@@ -58,4 +58,5 @@ function formatMindfulness(myMindfulnessMessage) {
     console.log(formatted);
 }
 
- formatMindfullness(myMindfullnessMessage);
+const mindfulnessMessage = generateMindfulnessMessage();
+formatMindfulness(mindfulnessMessage);
