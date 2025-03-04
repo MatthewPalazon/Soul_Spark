@@ -53,10 +53,9 @@ let symbol = [
 
     return myMindfulnessMessage;
 }
- 
- function formatMindfullness(){
-    const formatted = myMindfullnessMessage.join('\n')
-    console.log(formatted)
- }
+function formatMindfulness(myMindfulnessMessage) {
+    const formatted = myMindfulnessMessage.map(item => item.message).join('\n');
+    console.log(formatted);
+}
 
  formatMindfullness(myMindfullnessMessage);
