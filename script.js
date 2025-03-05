@@ -54,7 +54,20 @@ let symbol = [
     return myMindfulnessMessage;
 }
 function formatMindfulness(myMindfulnessMessage) {
-    const formatted = myMindfulnessMessage.map(item => item.message).join('\n');
+    const formatted = myMindfulnessMessage.map(item => {
+        // Determine the correct label based on object properties
+        let title = "";
+        if (item.object) {
+            title = `Object: ${item.object}`;
+        } else if (item.author) {
+            title = `Quote by: ${item.author}`;
+        } else if (item.action) {
+            title = `Task: ${item.action}`;
+        }
+
+        return `${title}\n${item.message}`;
+    }).join("\n\n"); // Separate sections with a blank line
+
     console.log(formatted);
 }
 
